@@ -40,7 +40,7 @@ public class Input implements InputProcessor {
 		// Gjør om y slik at posisjon 0 er i bunn av skjermen, likt slik det er når man tegner teksturer/sprite.
 		y = Gdx.graphics.getHeight() - y;
 		
-		if (wasGameboardClicked(x, y) && Game.getInstance().getActivePlayer().getNotUsedMark()) {
+		if (wasGameboardClicked(x, y)) {
 			updateGameboard(x, y);
 		}
 		else {		
@@ -97,7 +97,8 @@ public class Input implements InputProcessor {
 		switch(Game.getInstance().getSkill().getFlag()){
 		
 			case NO_SKILL:
-				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY) {
+				
+				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY && Game.getInstance().getActivePlayer().getNotUsedMark()) {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
 						activePlayer.setNotUsedMark(false);
@@ -119,6 +120,7 @@ public class Input implements InputProcessor {
 				break;
 			
 			case SHOOT:
+				//Gdx.app.log("Input", "shoot");
 				if(activePlayer instanceof Player1){
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P2_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
@@ -135,6 +137,7 @@ public class Input implements InputProcessor {
 				break;
 				
 			case BUILD:
+				//Gdx.app.log("Input", "build");
 				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY) {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
@@ -158,6 +161,7 @@ public class Input implements InputProcessor {
 				break;
 				
 			case SILENCE:
+				Gdx.app.log("Input", "emp");
 				if(activePlayer instanceof Player1){
 					Game.getInstance().getPlayer2().setSilenced(true);
 				}else{
@@ -165,6 +169,9 @@ public class Input implements InputProcessor {
 				}
 				activePlayer.subSilenceCount();
 				activePlayer.IncSilenceUsage();
+				break;
+			default:
+				Gdx.app.log("Input", "No skill selected!?");
 				break;
 		}
 		Game.getInstance().getSkill().cancelSkill();

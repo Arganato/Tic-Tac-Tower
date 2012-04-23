@@ -38,6 +38,8 @@ public abstract class Button {
 		return active;
 	}
 	
+	public abstract void updateActive();
+	
 	public abstract void execute();
 	
 	

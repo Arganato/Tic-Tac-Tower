@@ -3,6 +3,7 @@ package com.tictactower.ui;
 import com.badlogic.gdx.Gdx;
 import com.tictactower.Game;
 import com.tictactower.gameboard.Gameboard;
+import com.tictactower.player.Player;
 
 public class ButtonMultipleTowers extends Button {
 	
@@ -20,5 +21,9 @@ public class ButtonMultipleTowers extends Button {
 	public void execute() {
 		Game.getInstance().getActivePlayer().subSkillCap();
 		Gdx.app.log("Skill", "build... Build... BUILD!!!");
+	}
+	
+	public void updateActive(){
+		active = false; //SkillCap is never active (REMOVE);
 	}
 }

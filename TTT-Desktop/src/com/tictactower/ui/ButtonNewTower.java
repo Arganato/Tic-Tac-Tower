@@ -20,11 +20,12 @@ public class ButtonNewTower extends Button {
 
 	@Override
 	public void execute() {
+		Game.getInstance().getSkill().useSkill(SkillType.BUILD);
+		Gdx.app.log("ButtonNewTower", "NEW TOWAAAR!");
+	}
+	
+	public void updateActive(){
 		Player activePlayer = Game.getInstance().getActivePlayer();
-		if(activePlayer.getBuildCount()>0 && activePlayer.GetBuildUsage()<activePlayer.getSkillCap()){
-			Game.getInstance().getSkill().useSkill(SkillType.BUILD);
-			Gdx.app.log("Skill", "NEW TOWAAAR!");
-		}else{Gdx.app.log("Skill", "Cannot build!"); //For debug.
-		}
+		active = activePlayer.getBuildCount()>0 && activePlayer.GetBuildUsage()<activePlayer.getSkillCap();
 	}
 }

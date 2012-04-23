@@ -22,4 +22,8 @@ public class ButtonEndTurn extends Button {
 		active = false;
 		Game.getInstance().changeActivePlayer();	
 	}
+	
+	public void updateActive(){
+		active = !Game.getInstance().getActivePlayer().getNotUsedMark();
+	}
 }
