@@ -41,7 +41,7 @@ public class Game implements ApplicationListener {
 
 	@Override
 	public void create() {
-		Gdx.gl.glClearColor(0.6f, 0.6f, 0.6f, 1);
+		Gdx.gl.glClearColor(0.3f, 0.3f, 0.3f, 1);
 		
 		// Input trenger ingen peker siden kommunikasjonen bare er event-driven ut fra Input.
 		new Input();
@@ -84,6 +84,15 @@ public class Game implements ApplicationListener {
 
 	@Override
 	public void resume() {
+	}
+	
+	public void reset() {
+		getGameboard().resetGameboard();
+		getPlayer1().resetPlayer();
+		getPlayer2().resetPlayer();
+		activePlayer = player1;
+		activePlayer.setNotUsedMark(true);
+		Buttons.getButtonEndTurn().setActive(true);
 	}
 	
 	public Gameboard getGameboard() {

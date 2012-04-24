@@ -8,9 +8,10 @@ public class Buttons {
 	private final static ButtonEndTurn buttonEndTurn = new ButtonEndTurn(false);
 	private final static ButtonSilence buttonSilence = new ButtonSilence(false);
 	private final static ButtonNewTower buttonNewTower = new ButtonNewTower(false);
-
 	private final static ButtonDestroyTower buttonDestroyTower = new ButtonDestroyTower(false);
 	private final static ButtonMultipleTowers buttonMultipleTowers = new ButtonMultipleTowers(false);
+	private final static ButtonQuit buttonQuit = new ButtonQuit(true);
+	private final static ButtonReset buttonReset = new ButtonReset(true);
 	
 	public Buttons() {
 		createButtons();
@@ -21,6 +22,8 @@ public class Buttons {
 		buttonList.add(buttonNewTower);
 		buttonList.add(buttonDestroyTower);
 		buttonList.add(buttonMultipleTowers);
+		buttonList.add(buttonQuit);
+		buttonList.add(buttonReset);
 	}
 	
 	public static ArrayList<Button> getButtonList() {

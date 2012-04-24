@@ -48,8 +48,8 @@ public abstract class Player {
 	public boolean isSilenced(){
 		return silenced;
 	}
-	public void setSilenced(boolean b){
-		silenced = b;
+	public void setSilenced(boolean silenced){
+		this.silenced = silenced;
 	}
 	
 	public int getEmpCount() {
@@ -152,6 +152,23 @@ public abstract class Player {
 		silenceUsage = 0;
 		buildUsage = 0;
 		shootUsage = 0;
+	}
+	
+	public void resetPlayer() {
+		empCount = 0;
+		newTowerCount = 0;
+		destroyTowerCount = 0;
+		multipleTowersCount = 0;
+
+		silenceCount = 0;
+		buildCount = 0;
+		shootCount = 0;
+		skillCap = 0;
+		
+		silenceUsage = 0;
+		buildUsage = 0;
+		shootUsage = 0;
+		silenced = false;
 	}
 	
 	public abstract Mark getActiveMark();

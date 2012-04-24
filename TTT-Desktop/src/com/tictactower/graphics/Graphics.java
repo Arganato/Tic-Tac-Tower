@@ -1,6 +1,5 @@
 package com.tictactower.graphics;
 
-import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tictactower.Game;
@@ -13,6 +12,8 @@ import com.tictactower.ui.buttons.ButtonDestroyTower;
 import com.tictactower.ui.buttons.ButtonEndTurn;
 import com.tictactower.ui.buttons.ButtonMultipleTowers;
 import com.tictactower.ui.buttons.ButtonNewTower;
+import com.tictactower.ui.buttons.ButtonQuit;
+import com.tictactower.ui.buttons.ButtonReset;
 import com.tictactower.ui.buttons.ButtonSilence;
 import com.tictactower.ui.buttons.Buttons;
 import com.tictactower.ui.text.TextBox;
@@ -67,9 +68,9 @@ public class Graphics {
 				color = textBox.getColorActive();
 			else 
 				color = textBox.getColorDeactive();
-			textBox.font.setColor(color[0], color[1], 
+			TextBox.font.setColor(color[0], color[1], 
 			color[2], color[3]);
-			textBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
+			TextBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
 		}
 		
 		for (TextBox textBox : TextBoxes.getTextBoxListP2()) {
@@ -77,14 +78,16 @@ public class Graphics {
 				color = textBox.getColorActive();
 			else 
 				color = textBox.getColorDeactive();
-			textBox.font.setColor(color[0], color[1], 
+			TextBox.font.setColor(color[0], color[1], 
 					color[2], color[3]);
-			textBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
+			TextBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
 		}
 	}
 	
 	private Texture findTexture(Button button) {
 		if (button instanceof ButtonEndTurn) return Textures.BUTTON_END_TURN;
+		else if (button instanceof ButtonQuit) return Textures.BUTTON_QUIT;
+		else if (button instanceof ButtonReset) return Textures.BUTTON_RESET;
 		else if (button instanceof ButtonSilence) {
 			if (Game.getInstance().getActivePlayer().getSilenceCount() > 0) return Textures.BUTTON_SILENCE_ACTIVE;
 			else return Textures.BUTTON_SILENCE_DEACTIVE;

@@ -16,7 +16,6 @@ public class ButtonEndTurn extends Button {
 		this.active = active;
 	}
 	
-
 	@Override
 	public void execute() {
 		active = false;
