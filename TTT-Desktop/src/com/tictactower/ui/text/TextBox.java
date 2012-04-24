@@ -8,13 +8,13 @@ public abstract class TextBox{
 	public static final BitmapFont font = new BitmapFont();
 	
 	private Vector2 position;
-	private String text;
+	protected String text;
+	protected int value;
 	private float[] colorActive;
 	private float[] colorDeactive;
 	
-	public TextBox(int position_x, int position_y, String text, float[] colorActive, float[] colorDeactive) {
+	public TextBox(int position_x, int position_y, float[] colorActive, float[] colorDeactive) {
 		position = new Vector2(position_x, position_y);
-		this.text = text;
 		this.colorActive = colorActive;
 		this.colorDeactive = colorDeactive;
 	}
@@ -27,6 +27,10 @@ public abstract class TextBox{
 		return text;
 	}
 	
+	public int getValue() {
+		return value;
+	}
+	
 	public float[] getColorActive() {
 		return colorActive;
 	}
@@ -34,4 +38,11 @@ public abstract class TextBox{
 	public float[] getColorDeactive() {
 		return colorDeactive;
 	}
+	
+	public void update() {
+		value = fetchValue();
+	}
+	
+	public abstract int fetchValue();
+	
 }

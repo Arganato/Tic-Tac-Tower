@@ -27,6 +27,15 @@ public class TextBoxes {
 		textBoxListP2.add(textBoxSkillCapP2);
 	}
 	
+	public void update() {
+		for (TextBox textBox : textBoxListP1) {
+			textBox.update();
+		}
+		for (TextBox textBox : textBoxListP2) {
+			textBox.update();
+		}
+	}
+	
 	public static ArrayList<TextBox> getTextBoxListP1() {
 		return textBoxListP1;
 	}

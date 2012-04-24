@@ -83,11 +83,7 @@ public class Input implements InputProcessor {
 	}
 
 	private void updateGameboard(int x, int y) {
-		/*
-		 *  Her finner man de relative posisjonene til trykket i forhold til spillbrettet.
-		 *  Merk at det må trikses litt med y-posisjonen siden origo paa input er overst til venstre, 
-		 *  mens origo naar man tegner er nederst til venstre.
-		 */
+		// Her finner man de relative posisjonene til trykket i forhold til spillbrettet.
 		x -= Gameboard.X_OFFSET;
 		y -= Gameboard.Y_OFFSET;
 		// Saa deler man paa bredden/hoyden til ruten for aa faa hvilken rad/kolonne trykket kom i.

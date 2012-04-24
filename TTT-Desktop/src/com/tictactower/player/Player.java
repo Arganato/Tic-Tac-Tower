@@ -153,10 +153,6 @@ public abstract class Player {
 	}
 	
 	public void resetPlayer() {
-		empCount = 0;
-		newTowerCount = 0;
-		destroyTowerCount = 0;
-		multipleTowersCount = 0;
 
 		silenceCount = 0;
 		buildCount = 0;

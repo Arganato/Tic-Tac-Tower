@@ -70,7 +70,7 @@ public class Graphics {
 				color = textBox.getColorDeactive();
 			TextBox.font.setColor(color[0], color[1], 
 			color[2], color[3]);
-			TextBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
+			TextBox.font.draw(spriteBatch, textBox.getText() + Integer.toString(textBox.getValue()), textBox.getPosition().x, textBox.getPosition().y);
 		}
 		
 		for (TextBox textBox : TextBoxes.getTextBoxListP2()) {
@@ -80,7 +80,7 @@ public class Graphics {
 				color = textBox.getColorDeactive();
 			TextBox.font.setColor(color[0], color[1], 
 					color[2], color[3]);
-			TextBox.font.draw(spriteBatch, textBox.getText(), textBox.getPosition().x, textBox.getPosition().y);
+			TextBox.font.draw(spriteBatch, textBox.getText() + Integer.toString(textBox.getValue()), textBox.getPosition().x, textBox.getPosition().y);
 		}
 	}
 	

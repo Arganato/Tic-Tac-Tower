@@ -8,6 +8,7 @@ import com.tictactower.gameboard.Gameboard;
 import com.tictactower.gameboard.Mark;
 import com.tictactower.player.Player;
 import com.tictactower.skills.SkillType;
+import com.tictactower.ui.text.TextBoxes;
 
 
 public class Towers {
@@ -50,20 +51,21 @@ public class Towers {
 				if( s == SkillType.SHOOT){
 					activePlayer.addShootCount();
 					debugString += "shoot, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSkillCap() + " shoots");
+					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getShootCount() + " shoots");
 				}else if(s == SkillType.BUILD){
 					activePlayer.addBuildCount();
 					debugString += "build, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSkillCap() + " builds");
+					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getBuildCount() + " builds");
 				}else if(s == SkillType.SILENCE){
 					activePlayer.addSilenceCount();
 					debugString += "silence, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSkillCap() + " silences");
+					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSilenceCount() + " silences");
 				}else if(s == SkillType.SKILLCAP){
 					activePlayer.addSkillCap();
 					debugString += "skillCap, ";
 					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSkillCap() + " in Skill Cap");
 				}
+				Game.getInstance().getTextBoxes().update();
 			}
 			Gdx.app.log("Tower", "Found skills: "+debugString);
 		}
