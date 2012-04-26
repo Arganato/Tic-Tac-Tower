@@ -10,7 +10,6 @@ import com.tictactower.player.Player2;
 import com.tictactower.ui.buttons.Button;
 import com.tictactower.ui.buttons.ButtonDestroyTower;
 import com.tictactower.ui.buttons.ButtonEndTurn;
-import com.tictactower.ui.buttons.ButtonMultipleTowers;
 import com.tictactower.ui.buttons.ButtonNewTower;
 import com.tictactower.ui.buttons.ButtonQuit;
 import com.tictactower.ui.buttons.ButtonReset;
@@ -109,10 +108,6 @@ public class Graphics {
 		else if (button instanceof ButtonDestroyTower) {
 			if (Game.getInstance().getActivePlayer().getShootCount() > 0) return Textures.BUTTON_SHOOT_ACTIVE;
 			else return Textures.BUTTON_SHOOT_DEACTIVE;
-		}
-		else if (button instanceof ButtonMultipleTowers) {
-			if (Game.getInstance().getActivePlayer().getSkillCap() > 0) return Textures.BUTTON_SKILL_CAP_ACTIVE;
-			else return Textures.BUTTON_SKILL_CAP_DEACTIVE;
 		}
 		else return null;
 	}

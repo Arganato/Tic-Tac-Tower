@@ -7,7 +7,6 @@ import com.badlogic.gdx.math.Vector2;
 import com.tictactower.gameboard.Mark;
 import com.tictactower.skills.Skill;
 import com.tictactower.skills.SkillType;
-import com.tictactower.ui.buttons.Buttons;
 
 public abstract class Player {
 	
@@ -63,14 +62,12 @@ public abstract class Player {
 		silenceCount--;
 		if (silenceCount <= 0) {
 			silenceCount = 0;
-			Buttons.getButtonSilence().updateActive();
 		}
 	}
 
 	public void addSilenceCount() {
 		Gdx.app.log("Silence", "Increase");
 		silenceCount++;
-		Buttons.getButtonSilence().updateActive();
 	}
 
 	public int getBuildCount() {
@@ -80,14 +77,12 @@ public abstract class Player {
 	public void addBuildCount() {
 		Gdx.app.log("Build", "Increase");
 		buildCount++;
-		Buttons.getButtonNewTower().updateActive();
 	}
 	
 	public void subBuildCount() {
 		buildCount--;
 		if (buildCount <= 0) {
 			buildCount = 0;
-			Buttons.getButtonNewTower().updateActive();
 		}
 	}
 
@@ -98,14 +93,12 @@ public abstract class Player {
 	public void addShootCount() {
 		Gdx.app.log("Shoot", "Increase");
 		shootCount++;
-		Buttons.getButtonDestroyTower().updateActive();
 	}
 	
 	public void subShootCount() {
 		shootCount--;
 		if (shootCount <= 0) {
 			shootCount = 0;
-			Buttons.getButtonDestroyTower().updateActive();
 		}
 	}
 
@@ -116,7 +109,6 @@ public abstract class Player {
 	public void addSkillCap() {
 		Gdx.app.log("Skill Cap", "Increase");
 		skillCap++;
-		Buttons.getButtonMultipleTowers().updateActive();
 	}
 	
 	public void subSkillCap() {
@@ -164,18 +156,6 @@ public abstract class Player {
 		buildUsage = 0;
 		shootUsage = 0;
 		silenced = false;
-	}
-	
-	public ArrayList<Vector2> getNewMarkList() {
-		return newMarkList;
-	}
-	
-	public void addToNewMarkList(Vector2 newMark) {
-		newMarkList.add(newMark);
-	}
-	
-	public void resetNewMarkList() {
-		newMarkList = new ArrayList<Vector2>();
 	}
 
 	public ArrayList<SkillType> getUsedSkillList() {

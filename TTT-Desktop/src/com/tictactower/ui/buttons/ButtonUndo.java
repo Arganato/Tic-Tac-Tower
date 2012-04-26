@@ -22,24 +22,18 @@ public class ButtonUndo extends Button {
 
 	@Override
 	public void execute() {
-		ArrayList<SkillType> usedSkillList = Game.getInstance().getActivePlayer().getUsedSkillList();
-		ArrayList<Vector2> newMarkList = Game.getInstance().getActivePlayer().getNewMarkList();
-		while (!usedSkillList.isEmpty()) {
-			switch (usedSkillList.get(usedSkillList.size()-1)) {
-				case NO_SKILL:
-					Game.getInstance().getGameboard().setMark((int)newMarkList.get(newMarkList.size()-1).x, 
-							(int)newMarkList.get(newMarkList.size()-1).y, 
-							Mark.EMPTY);
-				case SHOOT:
-					
-					
-			}
-			usedSkillList.remove(usedSkillList.size()-1);
-			newMarkList.remove(newMarkList.size()-1);
-		}
+		Game.getInstance().getGameboard().undoGameboard();
+//		ArrayList<SkillType> usedSkillList = Game.getInstance().getActivePlayer().getUsedSkillList();
+//		while (!usedSkillList.isEmpty()) {
+//			switch (usedSkillList.get(usedSkillList.size()-1)) {
+//				case NO_SKILL:
+//				case SHOOT:
+//									
+//			}
+//			usedSkillList.remove(usedSkillList.size()-1);
+//		}
 		Game.getInstance().getActivePlayer().setNotUsedMark(true);
 		Game.getInstance().getActivePlayer().resetUsedSkillList();
-		Game.getInstance().getActivePlayer().resetNewMarkList();
 	}
 
 	@Override
