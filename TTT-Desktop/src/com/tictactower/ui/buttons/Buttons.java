@@ -6,6 +6,7 @@ public class Buttons {
 
 	private final static ArrayList<Button> buttonList = new ArrayList<Button>();
 	private final static ButtonEndTurn buttonEndTurn = new ButtonEndTurn(false);
+	private final static ButtonUndo buttonUndo = new ButtonUndo(false);
 	private final static ButtonSilence buttonSilence = new ButtonSilence(false);
 	private final static ButtonNewTower buttonNewTower = new ButtonNewTower(false);
 	private final static ButtonDestroyTower buttonDestroyTower = new ButtonDestroyTower(false);
@@ -18,6 +19,7 @@ public class Buttons {
 	}	
 	private void createButtons() {
 		buttonList.add(buttonEndTurn);
+		buttonList.add(buttonUndo);
 		buttonList.add(buttonSilence);
 		buttonList.add(buttonNewTower);
 		buttonList.add(buttonDestroyTower);
@@ -34,6 +36,10 @@ public class Buttons {
 		return buttonEndTurn;
 	}
 	
+	public static ButtonUndo getButtonUndo() {
+		return buttonUndo;
+	}
+
 	public static ButtonSilence getButtonSilence() {
 		return buttonSilence;
 	}

@@ -8,7 +8,6 @@ import com.tictactower.gameboard.Gameboard;
 import com.tictactower.gameboard.Mark;
 import com.tictactower.player.Player;
 import com.tictactower.skills.SkillType;
-import com.tictactower.ui.text.TextBoxes;
 
 
 public class Towers {
