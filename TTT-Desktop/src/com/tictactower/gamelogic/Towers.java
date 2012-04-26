@@ -237,17 +237,18 @@ public class Towers {
 	private static ArrayList<Towers> FindFiveTower(int direction, FieldIndex startPoint, boolean[][] cluster){
 		//checks for the three last pieces of a five-in-a-row tower in the given direction
 		//startPoint should be the second index
-		//returns number of found towers
+		//returns a list of found towers
 		ArrayList<Towers> towerList = new ArrayList<Towers>();
 		Towers tower = new Towers(startPoint, direction);
 		FieldIndex up = startPoint.Up(direction);
 		if( up.Valid() && cluster[up.x()][up.y()] ){
-			up = up.Up(direction);
 			tower.add(up);
+			up = up.Up(direction);
 			if( up.Valid() && cluster[up.x()][up.y()] ){
-				up = up.Up(direction);
 				tower.add(up);
+				up = up.Up(direction);
 				if( up.Valid() && cluster[up.x()][up.y()] ){
+					tower.add(up);
 					towerList.add(tower);
 					return towerList;
 				}
