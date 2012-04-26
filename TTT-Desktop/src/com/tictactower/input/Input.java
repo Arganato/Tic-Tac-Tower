@@ -50,7 +50,8 @@ public class Input implements InputProcessor {
 		}
 		for (Button button : Buttons.getButtonList()) {
 			button.updateActive();
-		}		
+		}	
+		Game.getInstance().getTextBoxes().update();
 		return false;
 	}
 
@@ -102,7 +103,7 @@ public class Input implements InputProcessor {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
 						activePlayer.setNotUsedMark(false);
-						activePlayer.addToUsedSkillList(SkillType.NO_SKILL);
+						activePlayer.setCanUndo(true);
 						Towers.findTowers(x, y, activePlayer);
 					}else{ //if the player has been silenced
 						activePlayer.setMark(x, y);
@@ -113,6 +114,7 @@ public class Input implements InputProcessor {
 						}else{
 							//the move is accepted
 							activePlayer.setNotUsedMark(false);
+							activePlayer.setCanUndo(true);
 							Buttons.getButtonEndTurn().setActive(true);					
 						}
 					}
@@ -124,16 +126,16 @@ public class Input implements InputProcessor {
 				if(activePlayer instanceof Player1){
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P2_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
-						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
-						activePlayer.IncShootUsage();
+						activePlayer.incShootUsage();
+						activePlayer.setCanUndo(true);
 					}
 				}else{
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P1_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
-						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
-						activePlayer.IncShootUsage();
+						activePlayer.incShootUsage();
+						activePlayer.setCanUndo(true);
 					}
 				}
 				break;
@@ -143,10 +145,10 @@ public class Input implements InputProcessor {
 				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY) {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
-						activePlayer.addToUsedSkillList(SkillType.BUILD);
 						activePlayer.subBuildCount();
-						activePlayer.IncBuildUsage();
+						activePlayer.incBuildUsage();
 						Towers.findTowers(x, y, activePlayer);
+						activePlayer.setCanUndo(true);
 					}else{ //if the player has been silenced
 						activePlayer.setMark(x, y);
 						if(!Towers.findTowers(x, y, activePlayer)){ 
@@ -157,8 +159,8 @@ public class Input implements InputProcessor {
 						}else{
 							//the move is accepted
 							activePlayer.subBuildCount();
-							activePlayer.IncBuildUsage();
-
+							activePlayer.incBuildUsage();
+							activePlayer.setCanUndo(true);
 						}
 					}
 				}
@@ -171,9 +173,10 @@ public class Input implements InputProcessor {
 				}else{
 					Game.getInstance().getPlayer1().setSilenced(true);
 				}
-				activePlayer.addToUsedSkillList(SkillType.SILENCE);
+				activePlayer.setCanUndo(true);
+				activePlayer.setHaveUsedSilence(true);
 				activePlayer.subSilenceCount();
-				activePlayer.IncSilenceUsage();
+				activePlayer.incSilenceUsage();
 				break;
 			default:
 				Gdx.app.log("Input", "No skill selected!?");

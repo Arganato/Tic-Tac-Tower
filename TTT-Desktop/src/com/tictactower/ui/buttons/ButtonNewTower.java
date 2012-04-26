@@ -26,6 +26,6 @@ public class ButtonNewTower extends Button {
 	
 	public void updateActive(){
 		Player activePlayer = Game.getInstance().getActivePlayer();
-		active = activePlayer.getBuildCount()>0 && activePlayer.GetBuildUsage()<activePlayer.getSkillCap();
+		active = activePlayer.getBuildCount()>0 && activePlayer.getBuildUsage()<activePlayer.getSkillCap();
 	}
 }

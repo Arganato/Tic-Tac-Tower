@@ -21,15 +21,16 @@ public class ButtonSilence extends Button {
 	@Override
 	public void execute() {
 		Player activePlayer = Game.getInstance().getActivePlayer();
-		if(activePlayer.getSilenceCount()>0 && activePlayer.GetSilenceUsage()==0){
+		if(activePlayer.getSilenceCount()>0 && activePlayer.getSilenceUsage()==0){
 			Game.getInstance().getSkill().useSkill(SkillType.SILENCE);
 			Gdx.app.log("ButtonSilence", "SIIIIIILEEEEEEEEENCE");
+			activePlayer.setHaveUsedSilence(true);
 		}else{Gdx.app.log("ButtonSilence", "Cannot silence!"); //For debug.
 		}
 	}
 	
 	public void updateActive(){
 		Player activePlayer = Game.getInstance().getActivePlayer();
-		active = activePlayer.getSilenceCount()>0 && activePlayer.GetSilenceUsage()<activePlayer.getSkillCap();
+		active = activePlayer.getSilenceCount()>0 && activePlayer.getSilenceUsage()<activePlayer.getSkillCap();
 	}
 }

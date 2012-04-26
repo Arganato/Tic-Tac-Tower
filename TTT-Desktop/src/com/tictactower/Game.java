@@ -125,9 +125,8 @@ public class Game implements ApplicationListener {
 	}
 	
 	public void changeActivePlayer() {
-		activePlayer.resetUsedSkillList();
 		activePlayer.setNotUsedMark(false);
-		activePlayer.ResetSkillUsage();
+		activePlayer.resetSkillUsage();
 		activePlayer.setSilenced(false);
 		if (activePlayer instanceof Player1)
 			activePlayer = player2;
@@ -136,17 +135,20 @@ public class Game implements ApplicationListener {
 		activePlayer.setNotUsedMark(true);
 		skill.cancelSkill();
 		gameboard.saveGameboard();
+		activePlayer.saveSkillCounts();
+		activePlayer.setCanUndo(false);
+		activePlayer.setHaveUsedSilence(false);
 	}
 	
 	public boolean canUseSkill(SkillType st){
 		if(st == SkillType.SHOOT){
-			return (activePlayer.GetShootUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getShootCount()>0);
+			return (activePlayer.getShootUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getShootCount()>0);
 		}
 		if(st == SkillType.BUILD){
-			return (activePlayer.GetBuildUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getBuildCount()>0);
+			return (activePlayer.getBuildUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getBuildCount()>0);
 		}
 		if(st == SkillType.SILENCE){
-			return (activePlayer.GetSilenceUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getSilenceCount()>0);
+			return (activePlayer.getSilenceUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getSilenceCount()>0);
 		}
 		return false;
 	}
@@ -162,13 +164,13 @@ public class Game implements ApplicationListener {
 	
 	public void incSkillUse(){
 		if(skill.getFlag() == SkillType.SHOOT){
-			activePlayer.IncShootUsage();
+			activePlayer.incShootUsage();
 		}
 		if(skill.getFlag() == SkillType.BUILD){
-			activePlayer.IncBuildUsage();
+			activePlayer.incBuildUsage();
 		}
 		if(skill.getFlag() == SkillType.SILENCE){
-			activePlayer.IncSilenceUsage();
+			activePlayer.incSilenceUsage();
 		}
 	}
 	

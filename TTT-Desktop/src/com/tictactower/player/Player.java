@@ -1,16 +1,13 @@
 package com.tictactower.player;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.Vector2;
 import com.tictactower.gameboard.Mark;
-import com.tictactower.skills.Skill;
-import com.tictactower.skills.SkillType;
 
 public abstract class Player {
 	
 	protected boolean notUsedMark;
+	protected boolean haveUsedSilence;
+	protected boolean canUndo;
 	
 	protected int score;
 	protected int id;
@@ -29,9 +26,7 @@ public abstract class Player {
 	
 	public abstract int getPlayerId();
 	
-	protected ArrayList<Skill> skills;
-	protected ArrayList<Vector2> newMarkList = new ArrayList<Vector2>();
-	protected ArrayList<SkillType> usedSkillList = new ArrayList<SkillType>();
+	protected int[] skillCounts = new int[4];
 	
 	public Player() {
 		notUsedMark = false;
@@ -115,31 +110,31 @@ public abstract class Player {
 		skillCap--;
 	}
 	
-	public void IncSilenceUsage(){
+	public void incSilenceUsage(){
 		silenceUsage++;
 	}
 	
-	public int GetSilenceUsage(){
+	public int getSilenceUsage(){
 		return silenceUsage;
 	}
 	
-	public void IncBuildUsage(){
+	public void incBuildUsage(){
 		buildUsage++;
 	}
 	
-	public int GetBuildUsage(){
+	public int getBuildUsage(){
 		return buildUsage; 
 	}
 	
-	public void IncShootUsage(){
+	public void incShootUsage(){
 		shootUsage++;
 	}
 	
-	public int GetShootUsage(){
+	public int getShootUsage(){
 		return shootUsage;
 	}
 	
-	public void ResetSkillUsage(){
+	public void resetSkillUsage(){
 		silenceUsage = 0;
 		buildUsage = 0;
 		shootUsage = 0;
@@ -150,24 +145,42 @@ public abstract class Player {
 		silenceCount = 0;
 		buildCount = 0;
 		shootCount = 0;
-		skillCap = 0;
+		skillCap = 1;
 		
 		silenceUsage = 0;
 		buildUsage = 0;
 		shootUsage = 0;
 		silenced = false;
 	}
-
-	public ArrayList<SkillType> getUsedSkillList() {
-		return usedSkillList;
-	}
-
-	public void addToUsedSkillList(SkillType newSkill) {
-		usedSkillList.add(newSkill);
+	
+	public void saveSkillCounts() {
+		skillCounts[0] = buildCount;
+		skillCounts[1] = shootCount;
+		skillCounts[2] = silenceCount;
+		skillCounts[3] = skillCap;
 	}
 	
-	public void resetUsedSkillList() {
-		usedSkillList = new ArrayList<SkillType>();
+	public void resetSkillCounts() {
+		buildCount = skillCounts[0];
+		shootCount = skillCounts[1];
+		silenceCount = skillCounts[2];
+		skillCap = skillCounts[3];
+	}
+	
+	public void setHaveUsedSilence(boolean haveUsedSilence) {
+		this.haveUsedSilence = haveUsedSilence;
+	}
+	
+	public boolean getHaveUsedSilence() {
+		return haveUsedSilence;
+	}
+	
+	public boolean getCanUndo() {
+		return canUndo;
+	}
+	
+	public void setCanUndo(boolean canUndo) {
+		this.canUndo = canUndo;
 	}
 	
 	public abstract Mark getActiveMark();

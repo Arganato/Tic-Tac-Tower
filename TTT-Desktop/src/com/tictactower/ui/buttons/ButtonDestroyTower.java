@@ -26,7 +26,7 @@ public class ButtonDestroyTower extends Button {
 	
 	public void updateActive(){
 		Player activePlayer = Game.getInstance().getActivePlayer();
-		active = activePlayer.getShootCount()>0 && activePlayer.GetShootUsage()<activePlayer.getSkillCap();
+		active = activePlayer.getShootCount()>0 && activePlayer.getShootUsage()<activePlayer.getSkillCap();
 
 	}
 	
