@@ -42,6 +42,8 @@ public class Graphics {
 					markTexture = Textures.MARK_P1_BUILT;
 				else if (gameboard[i][j].getMark() == Mark.P2_BUILT)
 					markTexture = Textures.MARK_P2_BUILT;
+				else if(gameboard[i][j].getMark() == Mark.DESTROYED)
+					markTexture = Textures.DESTROYED;
 				spriteBatch.draw(markTexture, 
 								gameboard[i][j].getPosition().x, 
 								gameboard[i][j].getPosition().y, 
