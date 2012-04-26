@@ -29,6 +29,4 @@ public class Textures {
 	public final static Texture BUTTON_SHOOT_DEACTIVE = new Texture("shoot_deactive.png");
 	public final static Texture BUTTON_BUILD_ACTIVE = new Texture("build_active.png");
 	public final static Texture BUTTON_BUILD_DEACTIVE = new Texture("build_deactive.png");
-	public final static Texture BUTTON_SKILL_CAP_ACTIVE = new Texture("skillc_active.png");
-	public final static Texture BUTTON_SKILL_CAP_DEACTIVE = new Texture("skillc_deactive.png");
 }

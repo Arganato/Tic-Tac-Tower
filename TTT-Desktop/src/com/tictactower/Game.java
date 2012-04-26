@@ -56,6 +56,7 @@ public class Game implements ApplicationListener {
 		
 		activePlayer = player1;
 		activePlayer.setNotUsedMark(true);
+		gameboard.saveGameboard();
 		
 		spriteBatch = new SpriteBatch();
 		
@@ -124,6 +125,7 @@ public class Game implements ApplicationListener {
 	}
 	
 	public void changeActivePlayer() {
+		activePlayer.resetUsedSkillList();
 		activePlayer.setNotUsedMark(false);
 		activePlayer.ResetSkillUsage();
 		activePlayer.setSilenced(false);
@@ -133,6 +135,7 @@ public class Game implements ApplicationListener {
 			activePlayer = player1;
 		activePlayer.setNotUsedMark(true);
 		skill.cancelSkill();
+		gameboard.saveGameboard();
 	}
 	
 	public boolean canUseSkill(SkillType st){

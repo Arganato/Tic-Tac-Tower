@@ -2,7 +2,6 @@ package com.tictactower.input;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
-import com.badlogic.gdx.math.Vector2;
 import com.tictactower.Game;
 import com.tictactower.gameboard.Gameboard;
 import com.tictactower.gameboard.Mark;
@@ -103,7 +102,6 @@ public class Input implements InputProcessor {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
 						activePlayer.setNotUsedMark(false);
-						activePlayer.addToNewMarkList(new Vector2(x, y));
 						activePlayer.addToUsedSkillList(SkillType.NO_SKILL);
 						Towers.findTowers(x, y, activePlayer);
 					}else{ //if the player has been silenced
@@ -126,7 +124,6 @@ public class Input implements InputProcessor {
 				if(activePlayer instanceof Player1){
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P2_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
-						activePlayer.addToNewMarkList(new Vector2(x, y));
 						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
 						activePlayer.IncShootUsage();
@@ -134,7 +131,6 @@ public class Input implements InputProcessor {
 				}else{
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P1_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
-						activePlayer.addToNewMarkList(new Vector2(x, y));
 						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
 						activePlayer.IncShootUsage();
@@ -147,7 +143,6 @@ public class Input implements InputProcessor {
 				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY) {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
-						activePlayer.addToNewMarkList(new Vector2(x, y));
 						activePlayer.addToUsedSkillList(SkillType.BUILD);
 						activePlayer.subBuildCount();
 						activePlayer.IncBuildUsage();
@@ -176,7 +171,6 @@ public class Input implements InputProcessor {
 				}else{
 					Game.getInstance().getPlayer1().setSilenced(true);
 				}
-				activePlayer.addToNewMarkList(new Vector2(0, 0));
 				activePlayer.addToUsedSkillList(SkillType.SILENCE);
 				activePlayer.subSilenceCount();
 				activePlayer.IncSilenceUsage();
@@ -186,9 +180,6 @@ public class Input implements InputProcessor {
 				break;
 		}
 		Game.getInstance().getSkill().cancelSkill();
-	}
-	private void placePiece(){
-		
 	}
 	
 	private void checkForButtonClicks(int x, int y) {
