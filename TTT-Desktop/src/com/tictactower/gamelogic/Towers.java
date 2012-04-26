@@ -16,9 +16,9 @@ public class Towers {
 		// The input variables is the position of the new mark.
 		// Find towers by iterating from that square on the board
 		// Returning a bool; true if one or more towers has been found
-		boolean[][] field = new boolean[Gameboard.NUMBER_OF_COLUMNS][Gameboard.NUMBER_OF_ROWS];
-		for(int i=0; i<Gameboard.NUMBER_OF_COLUMNS; i++){ // initializing the array...
-			for(int j=0; j<Gameboard.NUMBER_OF_ROWS; j++){
+		boolean[][] field = new boolean[Gameboard.COLUMNS_AND_ROWS][Gameboard.COLUMNS_AND_ROWS];
+		for(int i=0; i<Gameboard.COLUMNS_AND_ROWS; i++){ // initializing the array...
+			for(int j=0; j<Gameboard.COLUMNS_AND_ROWS; j++){
 				field[i][j] = false;
 			}
 		}
@@ -88,8 +88,8 @@ public class Towers {
 		// does this for all 8 directions.
 
 		ArrayList<Towers> towerList = new ArrayList<Towers>();
-		for (int nx=0; nx<Gameboard.NUMBER_OF_COLUMNS; nx++){ //checking for all elements in the cluster...
-			for (int ny=0; ny<Gameboard.NUMBER_OF_ROWS; ny++){
+		for (int nx=0; nx<Gameboard.COLUMNS_AND_ROWS; nx++){ //checking for all elements in the cluster...
+			for (int ny=0; ny<Gameboard.COLUMNS_AND_ROWS; ny++){
 				if( cluster[nx][ny]){
 
 					for (int i=0; i<8; i++){ //...in all directions

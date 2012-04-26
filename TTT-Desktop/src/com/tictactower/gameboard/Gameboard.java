@@ -6,18 +6,17 @@ import com.tictactower.player.Player1;
 
 public class Gameboard implements Cloneable {
 	
-	public final static int GAMEBOARD_EDGE_LENGTH = Square.EDGE_LENGTH * 9;
+	public final static int COLUMNS_AND_ROWS = 12;
+	public final static int GAMEBOARD_EDGE_LENGTH = Square.EDGE_LENGTH * COLUMNS_AND_ROWS;
 	public final static int X_OFFSET = (Gdx.graphics.getWidth() - GAMEBOARD_EDGE_LENGTH) / 2;
 	public final static int Y_OFFSET = (Gdx.graphics.getHeight() - (X_OFFSET + GAMEBOARD_EDGE_LENGTH + 65));
-	public final static int NUMBER_OF_COLUMNS = 9;
-	public final static int NUMBER_OF_ROWS = 9;
 	
 	Square[][] gameboard;
 	Square[][] gameboardSaved;
 	         
 	public Gameboard() {
 		// Oppretter gameboardet.
-		gameboard = new Square[NUMBER_OF_COLUMNS][NUMBER_OF_ROWS];
+		gameboard = new Square[COLUMNS_AND_ROWS][COLUMNS_AND_ROWS];
 		
 		
 		// Initialiserer gameboardet med tom brikke i hver rute.
@@ -67,7 +66,7 @@ public class Gameboard implements Cloneable {
 	}
 	
 	public void saveGameboard() {
-		gameboardSaved = new Square[NUMBER_OF_COLUMNS][NUMBER_OF_ROWS];
+		gameboardSaved = new Square[COLUMNS_AND_ROWS][COLUMNS_AND_ROWS];
 		for (int i = 0; i < gameboard.length; i++) {
 			for (int y = 0; y < gameboard[i].length; y++) {
 				gameboardSaved[i][y] = new Square(i, y, gameboard[i][y].getMark());
@@ -77,7 +76,7 @@ public class Gameboard implements Cloneable {
 	}
 	
 	public void undoGameboard() {
-		gameboard = new Square[NUMBER_OF_COLUMNS][NUMBER_OF_ROWS];
+		gameboard = new Square[COLUMNS_AND_ROWS][COLUMNS_AND_ROWS];
 		for (int i = 0; i < gameboard.length; i++) {
 			for (int y = 0; y < gameboard[i].length; y++) {
 				gameboard[i][y] = new Square(i, y, gameboardSaved[i][y].getMark());
