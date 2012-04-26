@@ -92,7 +92,7 @@ public class Game implements ApplicationListener {
 		getPlayer2().resetPlayer();
 		activePlayer = player1;
 		activePlayer.setNotUsedMark(true);
-		Buttons.getButtonEndTurn().setActive(true);
+		Buttons.getButtonEndTurn().updateActive();
 	}
 	
 	public Gameboard getGameboard() {
@@ -126,6 +126,7 @@ public class Game implements ApplicationListener {
 	public void changeActivePlayer() {
 		activePlayer.setNotUsedMark(false);
 		activePlayer.ResetSkillUsage();
+		activePlayer.setSilenced(false);
 		if (activePlayer instanceof Player1)
 			activePlayer = player2;
 		else

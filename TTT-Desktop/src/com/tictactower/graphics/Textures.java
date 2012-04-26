@@ -13,6 +13,7 @@ public class Textures {
 	public final static Texture MARK_P2_ACTIVE = new Texture("p2_active.png");
 	public final static Texture MARK_P1_BUILT = new Texture("p1_built.png");
 	public final static Texture MARK_P2_BUILT = new Texture("p2_built.png");
+	public final static Texture DESTROYED = new Texture("destroyed.png");
 	
 	public final static Texture BUTTON_QUIT = new Texture("quit.png");
 	public final static Texture BUTTON_RESET = new Texture("reset.png");

@@ -43,31 +43,28 @@ public class Towers {
 		ArrayList<SkillType> skillList = FindTowersInCluster(field, activePlayer); 
 		
 		//3. adding skills to the player
-		
+		String debugString = "";
 		if(!activePlayer.isSilenced()){
-			String debugString = "";
+			
 			for (SkillType s : skillList){
 				if( s == SkillType.SHOOT){
 					activePlayer.addShootCount();
 					debugString += "shoot, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getShootCount() + " shoots");
 				}else if(s == SkillType.BUILD){
 					activePlayer.addBuildCount();
 					debugString += "build, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getBuildCount() + " builds");
 				}else if(s == SkillType.SILENCE){
 					activePlayer.addSilenceCount();
 					debugString += "silence, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSilenceCount() + " silences");
 				}else if(s == SkillType.SKILLCAP){
 					activePlayer.addSkillCap();
 					debugString += "skillCap, ";
-					Gdx.app.log("Player " +activePlayer.getPlayerId(), "Now has: "+activePlayer.getSkillCap() + " in Skill Cap");
 				}
 				Game.getInstance().getTextBoxes().update();
 			}
-			Gdx.app.log("Tower", "Found skills: "+debugString);
+			
 		}
+		Gdx.app.log("Tower", "Found skills: "+debugString);
 		return !skillList.isEmpty();
 	}
 	
@@ -115,18 +112,19 @@ public class Towers {
 		}
 		ArrayList<SkillType> skillList = new ArrayList<SkillType>();
 		//marking the positions of the towers as built:
-		if(!player.isSilenced()){
-			//Gdx.app.log("Tower", "found "+Integer.toString(towerList.size())+" towers:");
-			for( Towers t : towerList){
-				//Gdx.app.log("", t.toString());
+		
+		//Gdx.app.log("Tower", "found "+Integer.toString(towerList.size())+" towers:");
+		for( Towers t : towerList){
+			//Gdx.app.log("", t.toString());
+			if(!player.isSilenced()){
 				for (FieldIndex f : t.tower){
 					if(!f.Valid()){
 						Gdx.app.error("Tower", "Invalid Tower: "+t.toString());
 					}
 					Game.getInstance().getGameboard().setMarkToBuilt(f.x(), f.y(), player);
 				}
-				skillList.add(t.towerType);
 			}
+			skillList.add(t.towerType);
 		}
 		return skillList;
 	}

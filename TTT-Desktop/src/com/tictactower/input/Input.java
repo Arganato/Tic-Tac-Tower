@@ -154,9 +154,10 @@ public class Input implements InputProcessor {
 						Towers.findTowers(x, y, activePlayer);
 					}else{ //if the player has been silenced
 						activePlayer.setMark(x, y);
-						if(Towers.findTowers(x, y, activePlayer)){ 
+						if(!Towers.findTowers(x, y, activePlayer)){ 
 							//this means that a tower has been found, and the move is illegal
 							Game.getInstance().getGameboard().clearMark(x, y);
+							Gdx.app.log("input","illegal move: you're silenced!");
 							//print something saying the move is illegal...
 						}else{
 							//the move is accepted
@@ -185,6 +186,9 @@ public class Input implements InputProcessor {
 				break;
 		}
 		Game.getInstance().getSkill().cancelSkill();
+	}
+	private void placePiece(){
+		
 	}
 	
 	private void checkForButtonClicks(int x, int y) {
