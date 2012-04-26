@@ -15,6 +15,7 @@ import com.tictactower.ui.buttons.ButtonNewTower;
 import com.tictactower.ui.buttons.ButtonQuit;
 import com.tictactower.ui.buttons.ButtonReset;
 import com.tictactower.ui.buttons.ButtonSilence;
+import com.tictactower.ui.buttons.ButtonUndo;
 import com.tictactower.ui.buttons.Buttons;
 import com.tictactower.ui.text.TextBox;
 import com.tictactower.ui.text.TextBoxes;
@@ -87,7 +88,14 @@ public class Graphics {
 	}
 	
 	private Texture findTexture(Button button) {
-		if (button instanceof ButtonEndTurn) return Textures.BUTTON_END_TURN;
+		if (button instanceof ButtonEndTurn) {
+			if (button.isActive()) return Textures.BUTTON_END_TURN_ACTIVE;	
+			else return Textures.BUTTON_END_TURN_DEACTIVE;
+		}
+		else if (button instanceof ButtonUndo) {
+			if (button.isActive()) return Textures.BUTTON_UNDO_ACTIVE;
+			else return Textures.BUTTON_UNDO_DEACTIVE;
+		}
 		else if (button instanceof ButtonQuit) return Textures.BUTTON_QUIT;
 		else if (button instanceof ButtonReset) return Textures.BUTTON_RESET;
 		else if (button instanceof ButtonSilence) {

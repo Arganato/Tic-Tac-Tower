@@ -2,12 +2,15 @@ package com.tictactower.input;
 
 import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.InputProcessor;
+import com.badlogic.gdx.math.Vector2;
 import com.tictactower.Game;
 import com.tictactower.gameboard.Gameboard;
 import com.tictactower.gameboard.Mark;
 import com.tictactower.gameboard.Square;
 import com.tictactower.gamelogic.Towers;
-import com.tictactower.player.*;
+import com.tictactower.player.Player;
+import com.tictactower.player.Player1;
+import com.tictactower.skills.SkillType;
 import com.tictactower.ui.buttons.Button;
 import com.tictactower.ui.buttons.Buttons;
 
@@ -36,7 +39,7 @@ public class Input implements InputProcessor {
 	}
 
 	@Override
-	public boolean touchDown(int x, int y, int pointer, int button) {
+	public boolean touchDown(int x, int y, int pointer, int btn) {
 		// Gjør om y slik at posisjon 0 er i bunn av skjermen, likt slik det er når man tegner teksturer/sprite.
 		y = Gdx.graphics.getHeight() - y;
 		
@@ -46,7 +49,9 @@ public class Input implements InputProcessor {
 		else {		
 			checkForButtonClicks(x, y);	
 		}
-		
+		for (Button button : Buttons.getButtonList()) {
+			button.updateActive();
+		}		
 		return false;
 	}
 
@@ -98,7 +103,8 @@ public class Input implements InputProcessor {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
 						activePlayer.setNotUsedMark(false);
-						Buttons.getButtonEndTurn().setActive(true);
+						activePlayer.addToNewMarkList(new Vector2(x, y));
+						activePlayer.addToUsedSkillList(SkillType.NO_SKILL);
 						Towers.findTowers(x, y, activePlayer);
 					}else{ //if the player has been silenced
 						activePlayer.setMark(x, y);
@@ -120,12 +126,16 @@ public class Input implements InputProcessor {
 				if(activePlayer instanceof Player1){
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P2_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
+						activePlayer.addToNewMarkList(new Vector2(x, y));
+						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
 						activePlayer.IncShootUsage();
 					}
 				}else{
 					if(Game.getInstance().getGameboard().getMark(x, y) == Mark.P1_ACTIVE){
 						Game.getInstance().getGameboard().setMark(x, y, Mark.DESTROYED);
+						activePlayer.addToNewMarkList(new Vector2(x, y));
+						activePlayer.addToUsedSkillList(SkillType.SHOOT);
 						activePlayer.subShootCount();
 						activePlayer.IncShootUsage();
 					}
@@ -137,6 +147,8 @@ public class Input implements InputProcessor {
 				if (Game.getInstance().getGameboard().getMark(x, y) == Mark.EMPTY) {
 					if(!activePlayer.isSilenced()){
 						activePlayer.setMark(x, y);
+						activePlayer.addToNewMarkList(new Vector2(x, y));
+						activePlayer.addToUsedSkillList(SkillType.BUILD);
 						activePlayer.subBuildCount();
 						activePlayer.IncBuildUsage();
 						Towers.findTowers(x, y, activePlayer);
@@ -164,6 +176,8 @@ public class Input implements InputProcessor {
 				}else{
 					Game.getInstance().getPlayer1().setSilenced(true);
 				}
+				activePlayer.addToNewMarkList(new Vector2(0, 0));
+				activePlayer.addToUsedSkillList(SkillType.SILENCE);
 				activePlayer.subSilenceCount();
 				activePlayer.IncSilenceUsage();
 				break;

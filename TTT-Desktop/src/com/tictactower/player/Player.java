@@ -3,8 +3,10 @@ package com.tictactower.player;
 import java.util.ArrayList;
 
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.math.Vector2;
 import com.tictactower.gameboard.Mark;
 import com.tictactower.skills.Skill;
+import com.tictactower.skills.SkillType;
 import com.tictactower.ui.buttons.Buttons;
 
 public abstract class Player {
@@ -29,6 +31,8 @@ public abstract class Player {
 	public abstract int getPlayerId();
 	
 	protected ArrayList<Skill> skills;
+	protected ArrayList<Vector2> newMarkList = new ArrayList<Vector2>();
+	protected ArrayList<SkillType> usedSkillList = new ArrayList<SkillType>();
 	
 	public Player() {
 		notUsedMark = false;
@@ -162,6 +166,32 @@ public abstract class Player {
 		silenced = false;
 	}
 	
+	public ArrayList<Vector2> getNewMarkList() {
+		return newMarkList;
+	}
+	
+	public void addToNewMarkList(Vector2 newMark) {
+		newMarkList.add(newMark);
+	}
+	
+	public void resetNewMarkList() {
+		newMarkList = new ArrayList<Vector2>();
+	}
+
+	public ArrayList<SkillType> getUsedSkillList() {
+		return usedSkillList;
+	}
+
+	public void addToUsedSkillList(SkillType newSkill) {
+		usedSkillList.add(newSkill);
+	}
+	
+	public void resetUsedSkillList() {
+		usedSkillList = new ArrayList<SkillType>();
+	}
+	
 	public abstract Mark getActiveMark();
+	
+	
 	
 }
