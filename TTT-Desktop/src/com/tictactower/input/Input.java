@@ -50,7 +50,8 @@ public class Input implements InputProcessor {
 		}
 		for (Button button : Buttons.getButtonList()) {
 			button.updateActive();
-		}		
+		}	
+		Game.getInstance().getTextBoxes().update();
 		return false;
 	}
 

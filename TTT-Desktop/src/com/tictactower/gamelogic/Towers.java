@@ -60,7 +60,6 @@ public class Towers {
 					activePlayer.addSkillCap();
 					debugString += "skillCap, ";
 				}
-				Game.getInstance().getTextBoxes().update();
 			}
 			
 		}
