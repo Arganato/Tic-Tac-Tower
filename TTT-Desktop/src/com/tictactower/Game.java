@@ -94,6 +94,7 @@ public class Game implements ApplicationListener {
 		activePlayer = player1;
 		activePlayer.setNotUsedMark(true);
 		Buttons.getButtonEndTurn().updateActive();
+		activePlayer.setCanUndo(false);
 	}
 	
 	public Gameboard getGameboard() {
