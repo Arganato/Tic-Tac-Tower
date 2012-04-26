@@ -21,5 +21,10 @@ public class ButtonReset extends Button {
 		Game.getInstance().reset();
 	}
 
+	@Override
+	public void updateActive() {
+		active = true; //always active
+	}
+
 }
 

@@ -20,4 +20,9 @@ public class ButtonQuit extends Button {
 		Gdx.app.exit();
 	}
 
+	@Override
+	public void updateActive() {
+		active = true; //always active
+	}
+
 }

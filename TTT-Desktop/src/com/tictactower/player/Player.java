@@ -15,12 +15,13 @@ public abstract class Player {
 	
 	protected int score;
 	protected int id;
-	protected int skillCap = 0;
 	protected boolean silenced;
 
 	protected int silenceCount = 0;
 	protected int buildCount = 0;
 	protected int shootCount = 0;
+	protected int skillCap = 1;
+
 	
 	protected int silenceUsage = 0;
 	protected int buildUsage = 0;
@@ -62,14 +63,14 @@ public abstract class Player {
 		silenceCount--;
 		if (silenceCount <= 0) {
 			silenceCount = 0;
-			Buttons.getButtonSilence().setActive(false);
+			Buttons.getButtonSilence().updateActive();
 		}
 	}
 
 	public void addSilenceCount() {
 		Gdx.app.log("Silence", "Increase");
 		silenceCount++;
-		Buttons.getButtonSilence().setActive(true);
+		Buttons.getButtonSilence().updateActive();
 	}
 
 	public int getBuildCount() {
@@ -79,14 +80,14 @@ public abstract class Player {
 	public void addBuildCount() {
 		Gdx.app.log("Build", "Increase");
 		buildCount++;
-		Buttons.getButtonNewTower().setActive(true);
+		Buttons.getButtonNewTower().updateActive();
 	}
 	
 	public void subBuildCount() {
 		buildCount--;
 		if (buildCount <= 0) {
 			buildCount = 0;
-			Buttons.getButtonNewTower().setActive(false);
+			Buttons.getButtonNewTower().updateActive();
 		}
 	}
 
@@ -97,14 +98,14 @@ public abstract class Player {
 	public void addShootCount() {
 		Gdx.app.log("Shoot", "Increase");
 		shootCount++;
-		Buttons.getButtonDestroyTower().setActive(true);
+		Buttons.getButtonDestroyTower().updateActive();
 	}
 	
 	public void subShootCount() {
 		shootCount--;
 		if (shootCount <= 0) {
 			shootCount = 0;
-			Buttons.getButtonDestroyTower().setActive(false);
+			Buttons.getButtonDestroyTower().updateActive();
 		}
 	}
 
@@ -115,15 +116,11 @@ public abstract class Player {
 	public void addSkillCap() {
 		Gdx.app.log("Skill Cap", "Increase");
 		skillCap++;
-		Buttons.getButtonMultipleTowers().setActive(true);
+		Buttons.getButtonMultipleTowers().updateActive();
 	}
 	
 	public void subSkillCap() {
 		skillCap--;
-		if (skillCap <= 0) {
-			skillCap = 0;
-			Buttons.getButtonMultipleTowers().setActive(false);
-		}
 	}
 	
 	public void IncSilenceUsage(){

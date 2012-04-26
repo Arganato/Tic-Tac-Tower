@@ -20,11 +20,14 @@ public class ButtonDestroyTower extends Button {
 
 	@Override
 	public void execute() {
-		Player activePlayer = Game.getInstance().getActivePlayer();
-		if(activePlayer.getShootCount()>0 && activePlayer.GetShootUsage()>=activePlayer.getSkillCap()){
-			Game.getInstance().getSkill().useSkill(SkillType.SHOOT);
-			Gdx.app.log("Skill", "DESTROY!!!");
-		}else{Gdx.app.log("Skill", "Cannot destroy!");
-		}
+		Game.getInstance().getSkill().useSkill(SkillType.SHOOT);
+		Gdx.app.log("Skill", "DESTROY!!!");
 	}
+	
+	public void updateActive(){
+		Player activePlayer = Game.getInstance().getActivePlayer();
+		active = activePlayer.getShootCount()>0 && activePlayer.GetShootUsage()<activePlayer.getSkillCap();
+
+	}
+	
 }

@@ -21,4 +21,8 @@ public class ButtonMultipleTowers extends Button {
 		Game.getInstance().getActivePlayer().subSkillCap();
 		Gdx.app.log("Skill", "build... Build... BUILD!!!");
 	}
+	
+	public void updateActive(){
+		active = false; //SkillCap is never active (REMOVE);
+	}
 }
