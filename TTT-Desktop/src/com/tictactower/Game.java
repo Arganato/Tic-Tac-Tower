@@ -141,38 +141,17 @@ public class Game implements ApplicationListener {
 		activePlayer.setHaveUsedSilence(false);
 	}
 	
-	public boolean canUseSkill(SkillType st){
-		if(st == SkillType.SHOOT){
-			return (activePlayer.getShootUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getShootCount()>0);
-		}
-		if(st == SkillType.BUILD){
-			return (activePlayer.getBuildUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getBuildCount()>0);
-		}
-		if(st == SkillType.SILENCE){
-			return (activePlayer.getSilenceUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getSilenceCount()>0);
-		}
-		return false;
-	}
-	
-	public boolean chooseSkill(SkillType st){
-		if(!canUseSkill(st)){
-			skill.cancelSkill();
-			return false;
-		}
-		skill.useSkill(st);
-		return true;
-	}
-	
-	public void incSkillUse(){
-		if(skill.getFlag() == SkillType.SHOOT){
-			activePlayer.incShootUsage();
-		}
-		if(skill.getFlag() == SkillType.BUILD){
-			activePlayer.incBuildUsage();
-		}
-		if(skill.getFlag() == SkillType.SILENCE){
-			activePlayer.incSilenceUsage();
-		}
-	}
+//	public boolean canUseSkill(SkillType st){
+//		if(st == SkillType.SHOOT){
+//			return (activePlayer.getShootUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getShootCount()>0);
+//		}
+//		if(st == SkillType.BUILD){
+//			return (activePlayer.getBuildUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getBuildCount()>0);
+//		}
+//		if(st == SkillType.SILENCE){
+//			return (activePlayer.getSilenceUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getSilenceCount()>0);
+//		}
+//		return false;
+//	}
 	
 }
