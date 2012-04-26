@@ -173,6 +173,10 @@ public abstract class Player {
 	public void addToNewMarkList(Vector2 newMark) {
 		newMarkList.add(newMark);
 	}
+	
+	public void resetNewMarkList() {
+		newMarkList = new ArrayList<Vector2>();
+	}
 
 	public ArrayList<SkillType> getUsedSkillList() {
 		return usedSkillList;
@@ -180,6 +184,10 @@ public abstract class Player {
 
 	public void addToUsedSkillList(SkillType newSkill) {
 		usedSkillList.add(newSkill);
+	}
+	
+	public void resetUsedSkillList() {
+		usedSkillList = new ArrayList<SkillType>();
 	}
 	
 	public abstract Mark getActiveMark();

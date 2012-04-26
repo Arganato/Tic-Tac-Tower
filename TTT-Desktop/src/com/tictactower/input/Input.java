@@ -39,7 +39,7 @@ public class Input implements InputProcessor {
 	}
 
 	@Override
-	public boolean touchDown(int x, int y, int pointer, int button) {
+	public boolean touchDown(int x, int y, int pointer, int btn) {
 		// Gjør om y slik at posisjon 0 er i bunn av skjermen, likt slik det er når man tegner teksturer/sprite.
 		y = Gdx.graphics.getHeight() - y;
 		
@@ -49,7 +49,9 @@ public class Input implements InputProcessor {
 		else {		
 			checkForButtonClicks(x, y);	
 		}
-		
+		for (Button button : Buttons.getButtonList()) {
+			button.updateActive();
+		}		
 		return false;
 	}
 
@@ -103,8 +105,6 @@ public class Input implements InputProcessor {
 						activePlayer.setNotUsedMark(false);
 						activePlayer.addToNewMarkList(new Vector2(x, y));
 						activePlayer.addToUsedSkillList(SkillType.NO_SKILL);
-						Buttons.getButtonEndTurn().setActive(true);
-						Buttons.getButtonUndo().setActive(true);
 						Towers.findTowers(x, y, activePlayer);
 					}else{ //if the player has been silenced
 						activePlayer.setMark(x, y);
