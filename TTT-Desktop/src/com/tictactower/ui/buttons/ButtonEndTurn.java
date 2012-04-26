@@ -1,4 +1,4 @@
-package com.tictactower.ui;
+package com.tictactower.ui.buttons;
 
 import com.badlogic.gdx.Gdx;
 import com.tictactower.Game;
@@ -16,7 +16,6 @@ public class ButtonEndTurn extends Button {
 		this.active = active;
 	}
 	
-
 	@Override
 	public void execute() {
 		active = false;

@@ -8,8 +8,8 @@ import com.tictactower.gameboard.Mark;
 import com.tictactower.gameboard.Square;
 import com.tictactower.gamelogic.Towers;
 import com.tictactower.player.*;
-import com.tictactower.ui.Button;
-import com.tictactower.ui.Buttons;
+import com.tictactower.ui.buttons.Button;
+import com.tictactower.ui.buttons.Buttons;
 
 public class Input implements InputProcessor {
 	
@@ -83,11 +83,7 @@ public class Input implements InputProcessor {
 	}
 
 	private void updateGameboard(int x, int y) {
-		/*
-		 *  Her finner man de relative posisjonene til trykket i forhold til spillbrettet.
-		 *  Merk at det må trikses litt med y-posisjonen siden origo paa input er overst til venstre, 
-		 *  mens origo naar man tegner er nederst til venstre.
-		 */
+		// Her finner man de relative posisjonene til trykket i forhold til spillbrettet.
 		x -= Gameboard.X_OFFSET;
 		y -= Gameboard.Y_OFFSET;
 		// Saa deler man paa bredden/hoyden til ruten for aa faa hvilken rad/kolonne trykket kom i.
