@@ -250,6 +250,7 @@ public class Towers {
 				if( up.Valid() && cluster[up.x()][up.y()] ){
 					tower.add(up);
 					towerList.add(tower);
+					Game.getInstance().setShowVictoryScreen(true);
 					return towerList;
 				}
 			}

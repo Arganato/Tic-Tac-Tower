@@ -6,7 +6,7 @@ import com.tictactower.player.Player1;
 
 public class Gameboard implements Cloneable {
 	
-	public final static int COLUMNS_AND_ROWS = 12;
+	public final static int COLUMNS_AND_ROWS = 10;
 	public final static int GAMEBOARD_EDGE_LENGTH = Square.EDGE_LENGTH * COLUMNS_AND_ROWS;
 	public final static int X_OFFSET = (Gdx.graphics.getWidth() - GAMEBOARD_EDGE_LENGTH) / 2;
 	public final static int Y_OFFSET = (Gdx.graphics.getHeight() - (X_OFFSET + GAMEBOARD_EDGE_LENGTH + 65));
