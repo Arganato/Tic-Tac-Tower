@@ -24,7 +24,7 @@ public class FieldIndex{
 		return "("+Integer.toString(x)+","+Integer.toString(y)+")";
 	}
 	public boolean Valid(){
-		return ( x>=0 && x<Gameboard.NUMBER_OF_ROWS ) && ( y>=0 && y<Gameboard.NUMBER_OF_COLUMNS );
+		return ( x>=0 && x<Gameboard.COLUMNS_AND_ROWS ) && ( y>=0 && y<Gameboard.COLUMNS_AND_ROWS );
 	}
 	
 	FieldIndex(int _x, int _y){
