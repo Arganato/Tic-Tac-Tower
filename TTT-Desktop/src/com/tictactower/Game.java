@@ -140,17 +140,4 @@ public class Game implements ApplicationListener {
 		activePlayer.setHaveUsedSilence(false);
 	}
 	
-//	public boolean canUseSkill(SkillType st){
-//		if(st == SkillType.SHOOT){
-//			return (activePlayer.getShootUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getShootCount()>0);
-//		}
-//		if(st == SkillType.BUILD){
-//			return (activePlayer.getBuildUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getBuildCount()>0);
-//		}
-//		if(st == SkillType.SILENCE){
-//			return (activePlayer.getSilenceUsage()<activePlayer.getSkillCap() && !activePlayer.isSilenced() && activePlayer.getSilenceCount()>0);
-//		}
-//		return false;
-//	}
-	
 }

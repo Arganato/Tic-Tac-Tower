@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <workbench progressCount="30" version="2.0">
 <workbenchAdvisor/>
-<window height="789" maximized="true" width="903" x="-305" y="-7">
+<window height="789" maximized="true" width="903" x="167" y="-10">
 <fastViewData fastViewLocation="1024"/>
 <perspectiveBar>
 <itemSize x="160"/>
@@ -33,63 +33,73 @@
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
 <part id="1"/>
 <part id="2"/>
 <part id="3"/>
 <part id="4"/>
-<part id="0"/>
 <part id="5"/>
 <part id="6"/>
 <part id="7"/>
 <part id="8"/>
+<part id="9"/>
+<part id="10"/>
 </presentation>
 </folder>
 </info>
 </editorArea>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonDestroyTower.java" partName="ButtonDestroyTower.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java" title="ButtonDestroyTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="1029" selectionTopPixel="0"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Graphics.java" partName="Graphics.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/graphics/Graphics.java" title="Graphics.java" tooltip="TTT-Desktop/src/com/tictactower/graphics/Graphics.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/graphics/Graphics.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="1" selectionOffset="1206" selectionTopPixel="275"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Button.java" partName="Button.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/Button.java" title="Button.java" tooltip="TTT-Desktop/src/com/tictactower/ui/Button.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/Button.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="37" selectionOffset="752" selectionTopPixel="245"/>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mark.java" partName="Mark.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/gameboard/Mark.java" title="Mark.java" tooltip="TTT-Desktop/src/com/tictactower/gameboard/Mark.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/gameboard/Mark.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" partName="Player.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/player/Player.java" title="Player.java" tooltip="TTT-Desktop/src/com/tictactower/player/Player.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="583" selectionTopPixel="725"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonEndTurn.java" partName="ButtonEndTurn.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java" title="ButtonEndTurn.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="803" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonMultipleTowers.java" partName="ButtonMultipleTowers.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java" title="ButtonMultipleTowers.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="919" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonNewTower.java" partName="ButtonNewTower.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java" title="ButtonNewTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="217" selectionTopPixel="0"/>
-</editor>
-<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonSilence.java" partName="ButtonSilence.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java" title="ButtonSilence.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java" workbook="DefaultEditorWorkbook">
-<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java"/>
-<editorState selectionHorizontalPixel="0" selectionLength="53" selectionOffset="936" selectionTopPixel="5"/>
-</editor>
-<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Skill.java" partName="Skill.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/skills/Skill.java" title="Skill.java" tooltip="TTT-Desktop/src/com/tictactower/skills/Skill.java" workbook="DefaultEditorWorkbook">
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Skill.java" partName="Skill.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/skills/Skill.java" title="Skill.java" tooltip="TTT-Desktop/src/com/tictactower/skills/Skill.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/skills/Skill.java"/>
 <editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
 </editor>
 <editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Input.java" partName="Input.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/input/Input.java" title="Input.java" tooltip="TTT-Desktop/src/com/tictactower/input/Input.java" workbook="DefaultEditorWorkbook">
 <input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/input/Input.java"/>
-<editorState selectionHorizontalPixel="69" selectionLength="0" selectionOffset="4960" selectionTopPixel="1040"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="5158" selectionTopPixel="2555"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonNewTower.java" partName="ButtonNewTower.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java" title="ButtonNewTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="994" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Buttons.java" partName="Buttons.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java" title="Buttons.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Button.java" partName="Button.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/ui/buttons/Button.java" title="Button.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/Button.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/ui/buttons/Button.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="0" selectionTopPixel="225"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" partName="Game.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/Game.java" title="Game.java" tooltip="TTT-Desktop/src/com/tictactower/Game.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/Game.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="3191" selectionTopPixel="1685"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" partName="Player.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/player/Player.java" title="Player.java" tooltip="TTT-Desktop/src/com/tictactower/player/Player.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="500" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Towers.java" partName="Towers.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/gamelogic/Towers.java" title="Towers.java" tooltip="TTT-Desktop/src/com/tictactower/gamelogic/Towers.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/gamelogic/Towers.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="9065" selectionTopPixel="3377"/>
+</editor>
+<editor id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DesktopStarter.java" partName="DesktopStarter.java" path="C:/Users/Eivind/Tic-Tac-Tower/TTT-Desktop/src/com/tictactower/DesktopStarter.java" title="DesktopStarter.java" tooltip="TTT-Desktop/src/com/tictactower/DesktopStarter.java" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/TTT-Desktop/src/com/tictactower/DesktopStarter.java"/>
+<editorState selectionHorizontalPixel="0" selectionLength="18" selectionOffset="185" selectionTopPixel="0"/>
 </editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
 <expanded>
-<category IMemento.internal.id="Warnings (1 item)"/>
-<category IMemento.internal.id="Errors"/>
+<category IMemento.internal.id="Warnings (3 items)"/>
 <category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
 </expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="714"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
@@ -228,14 +238,14 @@
 <view id="org.eclipse.jdt.ui.SourceView"/>
 <view id="org.eclipse.ui.console.ConsoleView"/>
 <fastViewBars>
-<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1943e30" orientation="256" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="0">
-<fastViews>
-<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
-</fastViews>
-</fastViewBar>
 <fastViewBar fastViewLocation="131072" id="right" orientation="512" selectedTabId="org.eclipse.ui.views.ContentOutline" style="0">
 <fastViews>
 <view id="org.eclipse.ui.views.ContentOutline" ratio="0.3"/>
+</fastViews>
+</fastViewBar>
+<fastViewBar fastViewLocation="131072" id="org.eclipse.ui.internal.ViewStack@1943e30" orientation="256" selectedTabId="org.eclipse.mylyn.tasks.ui.views.tasks" style="0">
+<fastViews>
+<view id="org.eclipse.mylyn.tasks.ui.views.tasks" ratio="0.3"/>
 </fastViews>
 </fastViewBar>
 </fastViewBars>
@@ -263,7 +273,7 @@
 <presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
 </folder>
 </info>
-<info part="org.eclipse.ui.editorss" ratio="0.2991755" ratioLeft="254" ratioRight="595" relationship="2" relative="left"/>
+<info part="org.eclipse.ui.editorss" ratio="0.25040257" ratioLeft="311" ratioRight="931" relationship="2" relative="left"/>
 <info folder="true" part="bottom" ratio="0.7846386" ratioLeft="521" ratioRight="143" relationship="4" relative="org.eclipse.ui.editorss">
 <folder activePageID="org.eclipse.ui.console.ConsoleView" appearance="2" expanded="2">
 <page content="org.eclipse.ui.views.ProblemView" label="Problems"/>
@@ -303,167 +313,170 @@
 <workingSets/>
 <navigationHistory>
 <editors>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/Button.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/graphics/Graphics.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/skills/Skill.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/skills/SkillType.java"/>
-<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/skills/SkillContainer.java"/>
 <editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/input/Input.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/Game.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/gamelogic/Towers.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonMultipleTowers.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/ui/buttons/Button.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/Game.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/graphics/Textures.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/gamelogic/Towers.java"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" path="/TTT-Desktop/src/com/tictactower/DesktopStarter.java"/>
 </editors>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="1603" y="0"/>
-</item>
-<item historyLabel="Button.java" index="1">
-<position info="not_deleted" x="236" y="0"/>
-</item>
-<item historyLabel="Button.java" index="1">
-<position info="not_deleted" x="768" y="0"/>
-</item>
-<item historyLabel="ButtonDestroyTower.java" index="0">
+<item historyLabel="Input.java" index="2">
 <position/>
 </item>
-<item historyLabel="ButtonDestroyTower.java" index="0">
-<position info="not_deleted" x="855" y="0"/>
+<item historyLabel="Game.java" index="3">
+<position info="not_deleted" x="3014" y="0"/>
 </item>
-<item historyLabel="ButtonEndTurn.java" index="3">
-<position info="not_deleted" x="801" y="0"/>
-</item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="ButtonEndTurn.java" index="3">
-<position info="not_deleted" x="803" y="0"/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
+<item historyLabel="Input.java" index="2">
 <position/>
 </item>
-<item historyLabel="ButtonEndTurn.java" index="3">
-<position info="not_deleted" x="803" y="0"/>
-</item>
-<item historyLabel="ButtonDestroyTower.java" index="0">
-<position info="not_deleted" x="862" y="198"/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
-<position info="not_deleted" x="989" y="0"/>
-</item>
-<item historyLabel="Button.java" index="1">
-<position info="not_deleted" x="752" y="37"/>
-</item>
-<item historyLabel="ButtonDestroyTower.java" index="0">
-<position info="not_deleted" x="883" y="0"/>
-</item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="241" y="0"/>
-</item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="1487" y="0"/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
-<position info="not_deleted" x="919" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="1276" y="0"/>
-</item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="2338" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="1276" y="0"/>
-</item>
-<item historyLabel="Skill.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SkillType.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SkillContainer.java" index="9">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="SkillType.java" index="8">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="Skill.java" index="7">
-<position info="not_deleted" x="0" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="962" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="1058" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
+<item historyLabel="Input.java" index="2">
 <position/>
 </item>
-<item historyLabel="ButtonNewTower.java" index="5">
+<item historyLabel="Towers.java" index="4">
+<position info="not_deleted" x="3560" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
 <position/>
 </item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
-<position info="not_deleted" x="919" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="1027" y="0"/>
-</item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="583" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="1027" y="0"/>
-</item>
-<item historyLabel="ButtonMultipleTowers.java" index="4">
-<position info="not_deleted" x="919" y="0"/>
-</item>
-<item historyLabel="ButtonDestroyTower.java" index="0">
-<position info="not_deleted" x="1029" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="1027" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="1245" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="217" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="1245" y="0"/>
-</item>
-<item historyLabel="ButtonNewTower.java" index="5">
-<position info="not_deleted" x="217" y="0"/>
-</item>
-<item historyLabel="Skill.java" index="7">
+<item historyLabel="Skill.java" index="1">
 <position info="not_deleted" x="0" y="0"/>
 </item>
-<item historyLabel="Player.java" index="2">
-<position info="not_deleted" x="583" y="0"/>
-</item>
-<item historyLabel="Input.java" index="10">
+<item historyLabel="Input.java" index="2">
 <position/>
 </item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="936" y="53"/>
-</item>
-<item historyLabel="Input.java" index="10">
-<position info="not_deleted" x="4960" y="0"/>
-</item>
-<item historyLabel="ButtonSilence.java" index="6">
-<position info="not_deleted" x="936" y="53"/>
-</item>
-<item active="true" historyLabel="Skill.java" index="7">
+<item historyLabel="ButtonMultipleTowers.java" index="5">
 <position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="ButtonMultipleTowers.java" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Button.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Button.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Graphics.java" index="0">
+<position info="not_deleted" x="2267" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="Game.java" index="9">
+<position/>
+</item>
+<item historyLabel="Button.java" index="8">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position/>
+</item>
+<item historyLabel="Player.java" index="10">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Graphics.java" index="0">
+<position info="not_deleted" x="2210" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position info="not_deleted" x="2447" y="4"/>
+</item>
+<item historyLabel="Buttons.java" index="7">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Game.java" index="9">
+<position/>
+</item>
+<item historyLabel="Player.java" index="10">
+<position info="not_deleted" x="584" y="0"/>
+</item>
+<item historyLabel="Textures.java" index="11">
+<position info="not_deleted" x="1191" y="20"/>
+</item>
+<item historyLabel="Player.java" index="10">
+<position info="not_deleted" x="584" y="0"/>
+</item>
+<item historyLabel="Graphics.java" index="0">
+<position info="not_deleted" x="2210" y="0"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position info="not_deleted" x="6156" y="0"/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="994" y="0"/>
+</item>
+<item historyLabel="Graphics.java" index="0">
+<position info="not_deleted" x="1206" y="1"/>
+</item>
+<item historyLabel="Input.java" index="2">
+<position info="not_deleted" x="5081" y="0"/>
+</item>
+<item historyLabel="ButtonNewTower.java" index="6">
+<position info="not_deleted" x="994" y="0"/>
+</item>
+<item historyLabel="Game.java" index="9">
+<position/>
+</item>
+<item historyLabel="Player.java" index="10">
+<position info="not_deleted" x="500" y="0"/>
+</item>
+<item historyLabel="Towers.java" index="12">
+<position info="not_deleted" x="9065" y="0"/>
+</item>
+<item historyLabel="DesktopStarter.java" index="13">
+<position info="not_deleted" x="185" y="18"/>
+</item>
+<item active="true" historyLabel="Game.java" index="9">
+<position/>
 </item>
 </navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
@@ -471,9 +484,6 @@
 <workbenchWindowAdvisor/>
 <actionBarAdvisor/>
 <trimLayout>
-<trimArea IMemento.internal.id="16384">
-<trimItem IMemento.internal.id="left"/>
-</trimArea>
 <trimArea IMemento.internal.id="131072">
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.ViewStack@1943e30"/>
 <trimItem IMemento.internal.id="right"/>
@@ -486,55 +496,54 @@
 <trimItem IMemento.internal.id="org.eclise.ui.internal.FastViewBar"/>
 <trimItem IMemento.internal.id="org.eclipse.jface.action.StatusLineManager"/>
 <trimItem IMemento.internal.id="org.eclipse.ui.internal.progress.ProgressRegion"/>
-<trimItem IMemento.internal.id="bottom"/>
 </trimArea>
 </trimLayout>
 </window>
 <mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="DesktopStarter.java" tooltip="TTT-Desktop/src/com/tictactower/DesktopStarter.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/DesktopStarter.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Towers.java" tooltip="TTT-Desktop/src/com/tictactower/gamelogic/Towers.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/gamelogic/Towers.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Textures.java" tooltip="TTT-Desktop/src/com/tictactower/graphics/Textures.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/graphics/Textures.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" tooltip="TTT-Desktop/src/com/tictactower/player/Player.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Game.java" tooltip="TTT-Desktop/src/com/tictactower/Game.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/Game.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Button.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/Button.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/ui/buttons/Button.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Buttons.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/ui/buttons/Buttons.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonNewTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonNewTower.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonMultipleTowers.java" tooltip="TTT-Desktop/src/com/tictactower/ui/buttons/ButtonMultipleTowers.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/ui/buttons/ButtonMultipleTowers.java"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="p1_active.png" tooltip="TTT-Android/assets/p1_active.png">
+<persistable path="/TTT-Android/assets/p1_active.png"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.ui.systemExternalEditor" name="build_active.png" tooltip="TTT-Android/assets/build_active.png">
+<persistable path="/TTT-Android/assets/build_active.png"/>
+</file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Input.java" tooltip="TTT-Desktop/src/com/tictactower/input/Input.java">
 <persistable path="/TTT-Desktop/src/com/tictactower/input/Input.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Skill.java" tooltip="TTT-Desktop/src/com/tictactower/skills/Skill.java">
 <persistable path="/TTT-Desktop/src/com/tictactower/skills/Skill.java"/>
 </file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SkillContainer.java" tooltip="TTT-Desktop/src/com/tictactower/skills/SkillContainer.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/skills/SkillContainer.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="SkillType.java" tooltip="TTT-Desktop/src/com/tictactower/skills/SkillType.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/skills/SkillType.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonSilence.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/ButtonSilence.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonNewTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/ButtonNewTower.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonMultipleTowers.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/ButtonMultipleTowers.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonEndTurn.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/ButtonEndTurn.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player.java" tooltip="TTT-Desktop/src/com/tictactower/player/Player.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/player/Player.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Button.java" tooltip="TTT-Desktop/src/com/tictactower/ui/Button.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/Button.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="ButtonDestroyTower.java" tooltip="TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/ButtonDestroyTower.java"/>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Mark.java" tooltip="TTT-Desktop/src/com/tictactower/gameboard/Mark.java">
+<persistable path="/TTT-Desktop/src/com/tictactower/gameboard/Mark.java"/>
 </file>
 <file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Graphics.java" tooltip="TTT-Desktop/src/com/tictactower/graphics/Graphics.java">
 <persistable path="/TTT-Desktop/src/com/tictactower/graphics/Graphics.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Player1.java" tooltip="TTT-Desktop/src/com/tictactower/player/Player1.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/player/Player1.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="TextField.java" tooltip="TTT-Desktop/src/com/tictactower/ui/TextField.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/ui/TextField.java"/>
-</file>
-<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.jdt.ui.CompilationUnitEditor" name="Textures.java" tooltip="TTT-Desktop/src/com/tictactower/graphics/Textures.java">
-<persistable path="/TTT-Desktop/src/com/tictactower/graphics/Textures.java"/>
 </file>
 </mruList>
 </workbench>
