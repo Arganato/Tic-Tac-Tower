@@ -37,6 +37,7 @@ public class Game implements ApplicationListener {
 	private Player activePlayer;
 	
 	SpriteBatch spriteBatch;
+	private boolean showVictoryScreen;
 
 	@Override
 	public void create() {
@@ -138,6 +139,14 @@ public class Game implements ApplicationListener {
 		activePlayer.saveSkillCounts();
 		activePlayer.setCanUndo(false);
 		activePlayer.setHaveUsedSilence(false);
+	}
+
+	public void setShowVictoryScreen(boolean showVictoryScreen) {
+		this.showVictoryScreen = showVictoryScreen;
+	}
+	
+	public boolean getShowVictoryScreen() {
+		return showVictoryScreen;
 	}
 	
 }

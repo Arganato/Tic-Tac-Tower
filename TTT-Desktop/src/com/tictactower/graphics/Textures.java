@@ -15,6 +15,9 @@ public class Textures {
 	public final static Texture MARK_P2_BUILT = new Texture("p2_built.png");
 	public final static Texture DESTROYED = new Texture("destroyed.png");
 	
+	public final static Texture VICTORY_SCREEN_PLAYER1 = new Texture("victory_screen_p1.png");
+	public final static Texture VICTORY_SCREEN_PLAYER2 = new Texture("victory_screen_p2.png");
+	
 	public final static Texture BUTTON_QUIT = new Texture("quit.png");
 	public final static Texture BUTTON_RESET = new Texture("reset.png");
 	

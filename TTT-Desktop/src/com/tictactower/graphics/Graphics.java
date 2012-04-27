@@ -1,5 +1,6 @@
 package com.tictactower.graphics;
 
+import com.badlogic.gdx.Gdx;
 import com.badlogic.gdx.graphics.Texture;
 import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.tictactower.Game;
@@ -21,9 +22,21 @@ import com.tictactower.ui.text.TextBoxes;
 public class Graphics {
 	
 	public void draw(SpriteBatch spriteBatch) {
-		drawGameboard(spriteBatch);
-		drawButtons(spriteBatch);
-		drawText(spriteBatch);
+		if (Game.getInstance().getShowVictoryScreen())
+			drawVictoryScreen(spriteBatch);
+		else {
+			drawGameboard(spriteBatch);
+			drawButtons(spriteBatch);
+			drawText(spriteBatch);
+		}
+	}
+
+	private void drawVictoryScreen(SpriteBatch spriteBatch) {
+		if (Game.getInstance().getActivePlayer() instanceof Player1)
+			spriteBatch.draw(Textures.VICTORY_SCREEN_PLAYER1, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		else
+			spriteBatch.draw(Textures.VICTORY_SCREEN_PLAYER2, 0, 0, Gdx.graphics.getWidth(), Gdx.graphics.getHeight());
+		
 	}
 
 	private void drawGameboard(SpriteBatch spriteBatch) {

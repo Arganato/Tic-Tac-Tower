@@ -23,6 +23,7 @@ public class FieldIndex{
 	public String toString(){
 		return "("+Integer.toString(x)+","+Integer.toString(y)+")";
 	}
+	
 	public boolean Valid(){
 		return ( x>=0 && x<Gameboard.COLUMNS_AND_ROWS ) && ( y>=0 && y<Gameboard.COLUMNS_AND_ROWS );
 	}
