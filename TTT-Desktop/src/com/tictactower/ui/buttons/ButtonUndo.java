@@ -1,15 +1,10 @@
 package com.tictactower.ui.buttons;
 
-import java.util.ArrayList;
-
 import com.badlogic.gdx.Gdx;
-import com.badlogic.gdx.math.Vector2;
 import com.tictactower.Game;
 import com.tictactower.gameboard.Gameboard;
-import com.tictactower.gameboard.Mark;
 import com.tictactower.player.Player;
 import com.tictactower.player.Player1;
-import com.tictactower.skills.SkillType;
 
 public class ButtonUndo extends Button {
 	

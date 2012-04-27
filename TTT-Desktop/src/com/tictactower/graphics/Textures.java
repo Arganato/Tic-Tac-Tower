@@ -18,13 +18,13 @@ public class Textures {
 	public final static Texture BUTTON_QUIT = new Texture("quit.png");
 	public final static Texture BUTTON_RESET = new Texture("reset.png");
 	
-	public final static Texture BUTTON_END_TURN_ACTIVE = new Texture("txtBox_75black.png");
-	public final static Texture BUTTON_END_TURN_DEACTIVE = new Texture("button_deactive.png");
-	public final static Texture BUTTON_UNDO_ACTIVE = new Texture("txtBox_75black.png");
-	public final static Texture BUTTON_UNDO_DEACTIVE = new Texture("button_deactive.png");
+	public final static Texture BUTTON_END_TURN_ACTIVE = new Texture("endturn_active.png");
+	public final static Texture BUTTON_END_TURN_DEACTIVE = new Texture("endturn_deactive.png");
+	public final static Texture BUTTON_UNDO_ACTIVE = new Texture("undo_active.png");
+	public final static Texture BUTTON_UNDO_DEACTIVE = new Texture("undo_deactive.png");
 	
-	public final static Texture BUTTON_SILENCE_ACTIVE = new Texture("emp_active.png");
-	public final static Texture BUTTON_SILENCE_DEACTIVE = new Texture("emp_deactive.png");
+	public final static Texture BUTTON_SILENCE_ACTIVE = new Texture("silence_active.png");
+	public final static Texture BUTTON_SILENCE_DEACTIVE = new Texture("silence_deactive.png");
 	public final static Texture BUTTON_SHOOT_ACTIVE = new Texture("shoot_active.png");
 	public final static Texture BUTTON_SHOOT_DEACTIVE = new Texture("shoot_deactive.png");
 	public final static Texture BUTTON_BUILD_ACTIVE = new Texture("build_active.png");

@@ -11,7 +11,6 @@ import com.tictactower.player.Player;
 import com.tictactower.player.Player1;
 import com.tictactower.player.Player2;
 import com.tictactower.skills.Skill;
-import com.tictactower.skills.SkillType;
 import com.tictactower.ui.buttons.Buttons;
 import com.tictactower.ui.text.TextBoxes;
 

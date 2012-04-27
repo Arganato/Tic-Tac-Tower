@@ -9,7 +9,6 @@ import com.tictactower.gameboard.Square;
 import com.tictactower.gamelogic.Towers;
 import com.tictactower.player.Player;
 import com.tictactower.player.Player1;
-import com.tictactower.skills.SkillType;
 import com.tictactower.ui.buttons.Button;
 import com.tictactower.ui.buttons.Buttons;
 
